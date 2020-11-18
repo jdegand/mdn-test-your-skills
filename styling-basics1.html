@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8"/>
+    <title>Styling basics: Task 1</title>
+    <style>
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+        font-size: 16px;
+      }
+
+      h2 {
+        text-align: center;
+      }
+
+    form {
+    margin: 0 auto;
+    width: 400px;
+    padding: 1em;
+    border: 1px solid #CCC;
+    border-radius: 1em;
+  }
+
+  ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  label {
+
+    display: inline-block;
+    width: 120px;
+    text-align: left;
+  }
+
+  input {
+    font: 1em sans-serif;
+    width: 300px;
+    box-sizing: border-box;
+    margin-bottom: 1em;
+    border: 1px solid #999;
+  }
+
+  input:focus {
+    border-color: #000;
+  }
+
+  .button {
+    padding-left: 90px;
+  }
+
+  button {
+    margin-top: 1em;
+  }
+
+    </style>
+  </head>
+
+  <body>
+    <form>
+      <h2>Edit your preferences</h2>
+      <ul>
+        <li>
+          <label for="e-mail">Email:</label>
+          <input type="email" id="e-mail" name="e-mail">
+        </li>
+        <li>
+          <label for="website">Website:</label>
+          <input type="url" id="website" name="website">
+        </li>
+        <li>
+          <label for="phone">Phone number:</label>
+          <input type="tel" id="phone" name="phone">
+        </li>
+        <li>
+          <label for="food">Favorite food:</label>
+          <select name="food" id="food">
+            <option>Salad</option>
+            <option>Curry</option>
+            <option>Pizza</option>
+            <option>Fajitas</option>
+          </select>
+        </li>
+        <li>
+          <button>Update preferences</button>
+        </li>
+      </ul>
+    </form>
+  </body>
+
+</html>

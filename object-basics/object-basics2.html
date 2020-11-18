@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8"/>
+    <title>Object basics: Task 2</title>
+    <style>
+      p {
+        color: purple;
+        margin: 0.5em 0;
+      }
+      * {
+        box-sizing: border-box;
+      }
+    </style>
+  </head>
+  <body>
+    <section class="preview">
+    </section>
+  </body>
+  <script>
+    let bandInfo;
+
+    // Add your code here
+
+    let band = {
+      name: 'The Who',
+      nationality: 'England',
+      genre: 'rock',
+      members: 4,
+      formed: 1964,
+      split: false,
+      albums: [{name: 'My Generation', released: 1965}, {name: 'A Quick One', released: 1966}]
+    }
+
+    bandInfo = `${band.name}, formed in ${band.nationality}, are a pioneering ${band.genre} band that have captivated audiences since their first album ${band.albums[0].name} in ${band.albums[0].released} to now.`
+
+
+    // Don't edit the code below here!
+
+    const section = document.querySelector('section');
+    let para1 = document.createElement('p');
+    para1.textContent = bandInfo;
+    section.appendChild(para1);
+  </script>
+</html>

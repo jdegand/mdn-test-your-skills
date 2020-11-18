@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8"/>
+    <title>Media/embedding: Task 1</title>
+    <style>
+      body {
+        background-color: #fff;
+        color: #333;
+        font: 1em / 1.4 Helvetica Neue, Helvetica, Arial, sans-serif;
+        padding: 1em;
+        margin: 0;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      audio {
+        border: 1px solid black;
+      }
+    </style>
+  </head>
+
+  <body>
+    <h1>Basic audio embed</h1>
+
+    <audio controls>
+      <source src="./media/audio.mp3" type="audio/mp3"></source>
+      <p>Your browser doesn't support HTML5 audio. Here is a <a href="audio.mp3">link to the audio</a> instead.</p>
+    </audio>
+  </body>
+
+</html>

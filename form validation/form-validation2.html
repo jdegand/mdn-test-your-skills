@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8"/>
+    <title>Form validation: Task 2</title>
+    <style>
+      body {
+        background-color: #fff;
+        color: #333;
+        font: 1em / 1.4 Helvetica Neue, Helvetica, Arial, sans-serif;
+        padding: 1em;
+        margin: 0;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+    </style>
+  </head>
+
+  <body>
+    <form>
+      <h2>Enter your support query</h2>
+      <ul>
+        <li>
+          <label for="uname">User name:</label>
+          <input
+            type="text"
+            name="uname"
+            id="uname"
+            minlength="5"
+            maxlength="20"
+            pattern="[a-z].[a-z]{3}"
+            title="1 lowercase letter followed by a decimal then 3 more lowercase letters"
+            required
+          >
+        </li>
+        <li>
+          <label for="email">Email address:</label>
+          <input
+            type="email"
+            name="email"
+            id="email"
+            pattern="[A-z0-9]+@bigcorp.eu"
+            title="All of the email addresses for our users consist of one or more letters (lower or upper case) or numbers, followed by '@bigcorp.eu'."
+            required
+          >
+        </li>
+        <li>
+          <label for="phone">Phone number:</label>
+          <input
+            type="tel"
+            name="phone"
+            id="phone"
+            pattern="[0-9]{10}|[0-9]{3}[-.][0-9]{3}[-.][0-9]{4}"
+            title="either 10 digits in a row, or a pattern of three digits, three digits, then four digits, separated by either spaces, dashes, or dots."
+            required
+            >
+        </li>
+        <li>
+          <label for="comment">Comment:</label>
+          <textarea name="comment" id="comment" maxlength="200">
+          </textarea>
+        </li>
+        <li>
+          <button>Submit comment</button>
+        </li>
+      </ul>
+    </form>
+  </body>
+</html>

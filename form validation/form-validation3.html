@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8"/>
+    <title>Form validation: Task 3</title>
+    <style>
+      body {
+        background-color: #fff;
+        color: #333;
+        font: 1em / 1.4 Helvetica Neue, Helvetica, Arial, sans-serif;
+        padding: 1em;
+        margin: 0;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+    </style>
+  </head>
+
+  <body>
+    <form>
+      <label for="mail">I would like you to provide me with an e-mail address:</label>
+      <input type="email" id="mail" name="mail" minlength="10" pattern="[a-z0-9]+@[a-z0-9]+" required>
+      <button>Submit</button>
+    </form>
+  </body>
+  <script>
+    const email = document.getElementById("mail");
+
+    email.addEventListener('input', () => {
+      email.setCustomValidity('');
+      email.checkValidity();
+    });
+
+  email.addEventListener('invalid', () => {
+    if(email.value === '' ) {
+      email.setCustomValidity('Email must be at least 10 characters long!');
+    } else {
+      email.setCustomValidity('No @ symbol');
+    }
+  });
+
+  </script>
+
+</html>

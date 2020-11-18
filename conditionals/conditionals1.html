@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8"/>
+    <title>Conditionals: Task 1</title>
+    <style>
+      p {
+        color: purple;
+        margin: 0.5em 0;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+    </style>
+  </head>
+  <body>
+    <section class="preview"></section>
+  </body>
+  <script>
+    let season = 'summer';
+    let response;
+
+    // Add your code here
+
+    season === 'summer' ? response = 'It is summer season' : response = "We don't know what season it is ";
+    season === 'winter' ? response = 'It is winter season' : response = "We don't know what season it is ";
+
+
+    // Don't edit the code below here!
+
+    const section = document.querySelector('section');
+
+    let para1 = document.createElement('p');
+    para1.textContent = response;
+    section.appendChild(para1);
+
+  </script>
+</html>
